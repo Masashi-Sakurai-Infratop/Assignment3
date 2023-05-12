@@ -1,10 +1,14 @@
 <h1>Books#index</h1>
 <p>Find me in app/views/books/index.html.erb</p>
-<%= flash[:notice] %>
-<% flash.discard(:notice) %>
+<% if flash[:notice] %>
+  <div class="alert alert-success" role="alert" >
+    <%= flash[:notice] %>
+    <% flash.discard(:notice) %>
+  </div>
+<% end %>
 
 <% if @new_book.errors.any? %>
-  <div class="alert-danger" role="alert">
+  <div class="alert alert-danger" role="alert">
     <h4 class="alert-heading">
       1 error prohibited this obj from being saved:
     </h4>
