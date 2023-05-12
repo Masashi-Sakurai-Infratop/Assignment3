@@ -1,5 +1,7 @@
 class BooksController < ApplicationController
   def index
+    @new_book = Book.new
+    @user = User.find(current_user.id)
   end
 
   def show
