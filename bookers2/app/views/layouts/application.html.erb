@@ -15,7 +15,7 @@
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
         <div class="container">
-          <%= link_to "Bookers", root_path, class: "navbar-brand p-3" %>
+          <a href="<%= root_path %>" class="navbar-brand p-3">Bookers</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -71,9 +71,9 @@
     </header>
 
     <main>
-      <% yield %>
+      <%= yield %>
     </main>
 
-    <footer>CopyRight Infratop.inc</footer>
+    <footer class="text-center">CopyRight Infratop.inc</footer>
   </body>
 </html>
