@@ -1,7 +1,8 @@
 class BooksController < ApplicationController
   def index
-    @new_book = Book.new
     @user = User.find(current_user.id)
+    @new_book = Book.new
+    @books = Book.all
   end
 
   def show
@@ -23,6 +24,12 @@ class BooksController < ApplicationController
       @user = User.find(current_user.id)
       render :index
     end
+  end
+
+  def destroy
+    book = Book.find(params[:id])
+    book.destroy
+    redirect_to books_path
   end
 
 
