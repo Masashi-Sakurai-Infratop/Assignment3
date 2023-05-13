@@ -1,11 +1,11 @@
-<!--ローカル変数としてnew_bookの一つがある-->
-<% if new_book.errors.any? %>
+<!--ローカル変数としてobjの一つがある-->
+<% if obj.errors.any? %>
   <div class="alert alert-danger" role="alert">
     <h4 class="alert-heading">
       1 error prohibited this obj from being saved:
     </h4>
     <ul>
-      <% new_book.errors.full_messages.each do |message| %>
+      <% obj.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
     </ul>
