@@ -22,14 +22,8 @@
   </tbody>
 </table>
 
-<% if current_user == user %>
-  <%= link_to edit_user_path(current_user.id), class: "btn btn-block btn-outline-secondary mt-10" do %>
-  <i class="fas fa-user-cog"></i>
-  <% end %>
-<% else %>
-  <%= link_to user_path(current_user.id), class: "btn btn-block btn-outline-secondary mt-10" do %>
-  <i class="fas fa-user-cog"></i>
-  <% end %>
+<%= link_to edit_user_path(user.id), class: "btn btn-block btn-outline-secondary mt-10" do %>
+<i class="fas fa-user-cog"></i>
 <% end %>
 
 <!--ここからはNewBook-->
